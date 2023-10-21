@@ -1,0 +1,83 @@
+h2 {
+    color: purple;
+}
+
+body {
+    background-color: #bdc3c7;
+}
+
+h1 {
+    color: #9b59b6;
+}
+
+h2 {
+    color: orange;
+}
+
+li {
+    color: blue;
+}
+
+p {
+    background-color: yellow;
+}
+
+input {
+    border: 3px;
+    color: red;
+}
+
+.hello {
+    background-color: pink;
+}
+
+[id="special"] {
+    border: 2px;
+    color: blue;
+}
+
+div p {
+    font-size: 25px;
+}
+
+input[type="text"] {
+    background-color: grey;
+}
+
+div:nth-child(5) p {
+    background-color: pink;
+}
+
+div:nth-child(5) p:nth-child(3) {
+    border: 5px;
+    color: white;
+}
+
+div:nth-child(5) em {
+    font-size: 20px;
+}
+
+:checked {
+    margin-left: 50px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+[id="special"]::first-letter {
+    color: green;
+    font-size: 100px;
+}
+
+h1:hover {
+    color: red;
+}
+
+a:visited {
+    color: gray;
+}
+
+:visited {
+    color: gray;
+}
