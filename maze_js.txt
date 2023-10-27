@@ -1,0 +1,61 @@
+var alerted = false;
+var stclick = false;
+var stime;
+var mousecur = false;
+
+
+function start() {
+    mousecur = true;
+    stclick = true;
+    stime = Date.now();
+    ondiv = true;
+    var x = document.getElementsByClassName("boundary");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "#eeeeee";
+    }
+    if (alerted == true) {
+        window.alerted = false;
+
+    }
+}
+
+
+function end() {
+
+    if (stclick && mousecur) {
+        var etime = Date.now();
+        var tgap = etime - stime;
+        var tgaps = tgap / parseFloat(1000);
+        alert("Yeah!!, You completed in:" + tgaps + "s");
+
+    } else if (stclick)
+        alert("No cheating, You moved cursor from outside maze")
+
+    else
+
+        alert("Please, Don't Cheat!!")
+
+}
+
+
+function changecolor() {
+    stclick = false;
+
+    var x = document.getElementsByClassName("boundary");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "red";
+
+    }
+
+    if (!window.alerted) {
+        window.alert("Sorry!! you lost");
+        window.alerted = true;
+    }
+}
+
+
+function outofdiv() {
+    mousecur = false;
+}
